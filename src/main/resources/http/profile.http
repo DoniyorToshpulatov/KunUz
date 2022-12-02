@@ -1,0 +1,39 @@
+### registration
+POST localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "name": "AbduMalik",
+  "surname": "Primov",
+  "phone": "+998919499363",
+  "password": "123malik"
+}
+### login
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+ "phone": "admin",
+  "password": "root"
+}
+### moderator create publisher
+POST localhost:8080/profile/create/admin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Njk4OTYwODEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2Njk5ODI0ODEsImlzcyI6Ik1hemdpIn0.Y4ZX-56exSLDY6ECr_cbUGBYXKU2X02_7gkXZI3yPetPBG1q7FXo2IKHOXE54qs_6k5U0jtkdW-xTRRipMRKAg
+
+{
+  "name": "Alisa",
+  "surname": "Aliyeva",
+  "phone": "mod",
+  "password": "11",
+  "role": "moderator"
+}
+### update admin
+PUT localhost:8080/profile/update/admin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Njk4OTYwODEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2Njk5ODI0ODEsImlzcyI6Ik1hemdpIn0.Y4ZX-56exSLDY6ECr_cbUGBYXKU2X02_7gkXZI3yPetPBG1q7FXo2IKHOXE54qs_6k5U0jtkdW-xTRRipMRKAg
+
+{
+  "visible": 1,
+  "status": "BLOCK"
+}
